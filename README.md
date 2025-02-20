@@ -7,25 +7,39 @@ Imagine que você tem um programa que realiza algumas ações para organizar arq
 @echo off: Desliga a exibição de comandos enquanto o script roda.
 
 ### Exemplo:
+@echo off: Isso é apenas uma forma de esconder alguns detalhes enquanto o script roda. Ele só vai mostrar o que você pedir no final.
 
-### Criar pastas:
-Se a pasta %1 não existir, ele cria.
-Entra na pasta %1.
-Se a pasta %2 não existir, ele cria.
-Entra na pasta %2.
+#### Verificar se o diretório existe e criar se não existir:
 
-### Calcular dias do mês:
-O script pega o mês (%2) e define o número de dias para o mês:
-Janeiro (1) → 31 dias
-Fevereiro (2) → 28 dias
-Março (3) → 31 dias
-E assim por diante para os outros meses.
+O script começa verificando se uma pasta (diretório) existe. Se não existir, ele cria essa pasta. Essa pasta é chamada de %1. A parte %1 é o primeiro valor que você passa para o script. Pode ser algo como C:\MeusArquivos.
 
-### Exibir o número de dias:
-Mostra na tela quantos dias o mês tem. Exemplo: "O número de dias no mês 5 é 31".
+Depois, ele entra nessa pasta, usando cd "%1", que é como se estivesse entrando nela para fazer mais coisas.
 
-### Voltar para as pastas anteriores:
-Sai da pasta %2 e volta para a pasta %1.
+##### Verificar e criar a segunda pasta:
+
+O script então verifica se existe uma segunda pasta, chamada %2. Se não existir, ele cria também.
+Depois, ele entra nessa segunda pasta.
+
+#### Configurar o mês e calcular os dias:
+O script pega o valor que você passou como o segundo parâmetro, chamado %2. Esse valor é o mês (por exemplo, "1" para janeiro, "2" para fevereiro, etc.).
+Ele começa com um comando "echo oi", mas isso não faz nada muito importante, só um "oi" simples.
+Depois, ele verifica qual é o mês e coloca a quantidade de dias desse mês na variável dias. Por exemplo, se o mês for 1 (janeiro), ele define que o mês tem 31 dias. Se for fevereiro (mês 2), ele coloca 28 dias (o script não trata anos bissextos, mas podemos adicionar isso mais tarde se for necessário).
+
+
+#### Mostrar o número de dias no mês:
+Depois de fazer esses cálculos, ele mostra na tela algo como: "O número de dias no mês 1 é 31", ou o número de dias correspondente.
+Voltar para o diretório anterior:
+
+Por fim, ele sai da segunda pasta e volta para a pasta inicial, usando cd .. (que é como voltar para trás).
+Exemplo do que acontece se você rodar o script:
+Suponha que você execute o script com os seguintes parâmetros:
+meu_script.bat "Pasta1" "5"
+
+Primeiro, ele vai criar a pasta "Pasta1" se não existir.
+Depois, entra na "Pasta1" e cria outra pasta (chamada "5") se não existir.
+Ele vai verificar que o mês é 5 (maio) e vai definir que o mês tem 31 dias.
+Depois, vai mostrar na tela: "O número de dias no mês 5 é 31".
+No final, ele volta para a pasta onde o script foi executado.
 
 ## Desafios:
 Não encontrei muitos desafios na hora de fazer a programação,foi no momento se separava os núneros ou deixava juntos mesmo.
