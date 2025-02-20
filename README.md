@@ -32,3 +32,13 @@ Não encontrei muitos desafios na hora de fazer a programação,foi no momento s
 
 ## O que aprendi: 
 Vi como criar pastas como se fosse um caledário com várias pastas.Vai ajudar no dia a dia facilitando criar pastas e executar elas só com códigos.
+
+## Comandos:
+#### . @echo off - Isso é apenas uma forma de esconder alguns detalhes enquanto o script roda. Ele só vai mostrar o que você pedir no final.
+#### . :: - adiciona um comentário.
+#### . if - permite executar comandos baseados em condições, como verificar se um arquivo existe.
+#### . set- cria uma variável.
+#### . mkdir- criar uma pasta.
+#### . cd- para entrar dentro da pasta.
+
+![sistemas operacionais](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzEzdWhrZmFuZm8wNGQ1Ym9paDg0eXo0Nmt4YXg1ZnZoemlhMWpsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LHZyixOnHwDDy/giphy.gif)
